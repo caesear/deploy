@@ -1,0 +1,998 @@
+{
+  "version": "0.1.0",
+  "name": "blindbox",
+  "instructions": [
+    {
+      "name": "initializeMint",
+      "docs": [
+        "Initializes a new mint and account."
+      ],
+      "accounts": [
+        {
+          "name": "mintAuthority",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "mint",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "recipient",
+          "isMut": false,
+          "isSigner": false,
+          "docs": [
+            "CHECK"
+          ]
+        },
+        {
+          "name": "recipientToken",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "fundPool",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "lpPool",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "metadata",
+          "isMut": true,
+          "isSigner": false,
+          "docs": [
+            "CHECK"
+          ]
+        },
+        {
+          "name": "blindBox",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenMetadataProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "associatedTokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "params",
+          "type": {
+            "defined": "TokenParams"
+          }
+        }
+      ]
+    },
+    {
+      "name": "createCollection",
+      "docs": [
+        "Creates a new collection nft."
+      ],
+      "accounts": [
+        {
+          "name": "authority",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "collectionMint",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "metadataAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "masterEdition",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "cardInfo",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "associatedTokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenMetadataProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "params",
+          "type": {
+            "defined": "NftParams"
+          }
+        }
+      ]
+    },
+    {
+      "name": "createItem",
+      "docs": [
+        "Creates a new nft item."
+      ],
+      "accounts": [
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "cardInfo",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "collectionMint",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "collectionMetadataAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "collectionMasterEdition",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "nftMint",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "metadataAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "masterEdition",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "feeRecipient",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "ticket",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "associatedTokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenMetadataProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "params",
+          "type": {
+            "defined": "CreateParams"
+          }
+        }
+      ]
+    },
+    {
+      "name": "openBox",
+      "docs": [
+        "Open blind box"
+      ],
+      "accounts": [
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "ticket",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "mint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "fundPool",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "userToken",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "blindBox",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "associatedTokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "slotHashes",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "pledgeToken",
+      "docs": [
+        "Pledge Token"
+      ],
+      "accounts": [
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "mint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "userToken",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "lpPool",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "pledgePool",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "pledgeUser",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "associatedTokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "pledgeAmount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "unpledgeToken",
+      "docs": [
+        "Unpledge Token"
+      ],
+      "accounts": [
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "mint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "userToken",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "lpPool",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "pledgePool",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "pledgeUser",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "associatedTokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "unpledgeAmount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "pledgeNft",
+      "docs": [
+        "Pledge NFT"
+      ],
+      "accounts": [
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "nftMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "userTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "platTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "saleinfo",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "pledgePool",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "pledgeUser",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "associatedTokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "timestamp",
+          "type": "i64"
+        }
+      ]
+    },
+    {
+      "name": "unpledgeNft",
+      "docs": [
+        "Unpledge NFT"
+      ],
+      "accounts": [
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "nftMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "userTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "platTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "saleinfo",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "pledgePool",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "pledgeUser",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "associatedTokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "timestamp",
+          "type": "i64"
+        }
+      ]
+    },
+    {
+      "name": "shareProfit",
+      "docs": [
+        "Share profit"
+      ],
+      "accounts": [
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "mint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "pledgePool",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rayValut",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "calcInfo",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "drawProfit",
+      "docs": [
+        "Draw profit"
+      ],
+      "accounts": [
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "mint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "pledgeUser",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "pledgePool",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "fundPool",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "userToken",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "associatedTokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    }
+  ],
+  "accounts": [
+    {
+      "name": "BlindBox",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "totalTokens",
+            "type": "u64"
+          },
+          {
+            "name": "totalBoxes",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CardInfo",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "authority",
+            "type": "publicKey"
+          },
+          {
+            "name": "collectionMint",
+            "type": "publicKey"
+          },
+          {
+            "name": "collectionMetadata",
+            "type": "publicKey"
+          },
+          {
+            "name": "collectionEdition",
+            "type": "publicKey"
+          },
+          {
+            "name": "feeRecipient",
+            "type": "publicKey"
+          },
+          {
+            "name": "supply",
+            "type": "u32"
+          },
+          {
+            "name": "preSale",
+            "type": "u32"
+          },
+          {
+            "name": "limit",
+            "type": "u32"
+          },
+          {
+            "name": "price",
+            "type": "u64"
+          },
+          {
+            "name": "timestamp",
+            "type": "i64"
+          },
+          {
+            "name": "totalMinted",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NftBuy",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "owner",
+            "type": "publicKey"
+          },
+          {
+            "name": "mint",
+            "type": "publicKey"
+          },
+          {
+            "name": "timestamp",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PledgeUser",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "nftAmount",
+            "type": "u64"
+          },
+          {
+            "name": "nftDebt",
+            "type": "f64"
+          },
+          {
+            "name": "nftRemaining",
+            "type": "f64"
+          },
+          {
+            "name": "tokenAmount",
+            "type": "u64"
+          },
+          {
+            "name": "tokenDebt",
+            "type": "f64"
+          },
+          {
+            "name": "tokenRemaining",
+            "type": "f64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PledgePool",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "nftStaked",
+            "type": "u64"
+          },
+          {
+            "name": "nftAccRatio",
+            "type": "f64"
+          },
+          {
+            "name": "tokenStaked",
+            "type": "u64"
+          },
+          {
+            "name": "tokenAccRatio",
+            "type": "f64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NftSale",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "owner",
+            "type": "publicKey"
+          },
+          {
+            "name": "mint",
+            "type": "publicKey"
+          },
+          {
+            "name": "timestamp",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CalcInfo",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "time",
+            "type": "i64"
+          }
+        ]
+      }
+    }
+  ],
+  "types": [
+    {
+      "name": "TokenParams",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "symbol",
+            "type": "string"
+          },
+          {
+            "name": "uri",
+            "type": "string"
+          },
+          {
+            "name": "decimals",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NftParams",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "symbol",
+            "type": "string"
+          },
+          {
+            "name": "uri",
+            "type": "string"
+          },
+          {
+            "name": "price",
+            "type": "u64"
+          },
+          {
+            "name": "limit",
+            "type": "u32"
+          },
+          {
+            "name": "timestamp",
+            "type": "i64"
+          },
+          {
+            "name": "feeRecipient",
+            "type": "publicKey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CreateParams",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "symbol",
+            "type": "string"
+          },
+          {
+            "name": "uri",
+            "type": "string"
+          },
+          {
+            "name": "timestamp",
+            "type": "i64"
+          },
+          {
+            "name": "isPreSale",
+            "type": "bool"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "CollectionSoldOut",
+      "msg": "Collection is sold out"
+    },
+    {
+      "code": 6001,
+      "name": "MintCountExceededLimit",
+      "msg": "Mint count exceeded limit"
+    },
+    {
+      "code": 6002,
+      "name": "NotInCurrentValidTime",
+      "msg": "Not in current valid time"
+    },
+    {
+      "code": 6003,
+      "name": "AuthorityNotMatch",
+      "msg": "Authority not match"
+    },
+    {
+      "code": 6004,
+      "name": "InsufficientBalance",
+      "msg": "Insufficient balance"
+    },
+    {
+      "code": 6005,
+      "name": "TokenAmountExceededLimit",
+      "msg": "Token amount exceeded limit"
+    },
+    {
+      "code": 6006,
+      "name": "BoxAmountExceededLimit",
+      "msg": "Box amount exceeded limit"
+    },
+    {
+      "code": 6007,
+      "name": "TimeNotReach",
+      "msg": "Time not reach"
+    }
+  ]
+}

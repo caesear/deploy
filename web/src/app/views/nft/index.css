@@ -1,0 +1,96 @@
+.nft{
+  background: #FFFFFF;
+  border-radius: 0.26rem;
+  padding: 0.25rem 0.6rem;
+  margin-top: 0.3rem;
+
+  position: relative;
+  z-index: 1;
+}
+
+.nft-tab{
+  display: flex;
+  flex-direction: row;
+  font-size: 0.3rem;
+  margin-bottom: 0.4rem;
+}
+.nft-tab-item{
+  color: #999999;
+  margin-right: 0.3rem;
+  cursor: pointer;
+  padding: 0.15rem 0;
+}
+.nft-tab-active{
+  color: #1A1A1A;
+  position: relative;
+}
+.nft-tab-active::after{
+  position: absolute;
+  content: '';
+  width: 0.3rem;
+  height: 0.04rem;
+  background: #0759FA;
+  bottom: 0;
+  left: 50%;
+  margin-left: -0.15rem;
+}
+.nft-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.nft-list-item{
+  width: 30%;
+  margin-right: 5%;
+  border-radius: 0.2rem;
+  overflow: hidden;
+  padding-bottom: 0.2rem;
+  background-color: #F7F7F7;
+  margin-bottom: 0.45rem;
+}
+.nft-list-item:nth-of-type(3n){
+  margin-right: 0;
+}
+.nft-list-thumb{
+  width: 100%;
+  margin-bottom: 0.2rem;
+}
+.nft-list-text{
+  font-size: 0.22rem;
+  padding: 0 0.2rem;
+  color: #000000;
+  margin-bottom: 0.08rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.nft-list-btn{
+  width: 0.87rem;
+  padding: 0.02rem 0;
+  font-size: 0.18rem;
+  margin: 0 auto;
+  color: #FFFFFF;
+  background: #0759FA;
+  border-radius: 0.15rem;
+  text-align: center;
+  border: 1px solid #0759FA;
+  margin-top: 0.2rem;
+  cursor: pointer;
+}
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 0.4rem 0 0.88rem;
+}
+.footer-icon1{
+  width: 2.78rem;
+  height: 3rem;
+  margin-top: -1.56rem;
+}
+.footer-icon2{
+  width: 2.94rem;
+  height: 2.62rem;
+  margin-top: -1.56rem;
+}

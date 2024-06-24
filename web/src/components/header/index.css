@@ -1,0 +1,64 @@
+
+.header{
+  height: 1.28rem;
+  background: #fff;
+}
+.header-avatar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header-avatar-icon{
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-right: 0.18rem;
+}
+.header-name{
+  color: #000;
+  font-size: 0.35rem;
+}
+.tool{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.tool-lange{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 0.26rem;
+  color: #212121;
+  cursor: pointer;
+}
+.tool-lange-icon{
+  margin-left: 0.16rem;
+  width: 0.18rem;
+  height: 0.14rem;
+}
+/* .tool-btn{
+  margin-left: 0.5rem;
+  width: 2.34rem;
+  text-align: center;
+  height: 0.63rem;
+  line-height: 0.63rem;
+  background: #0759FA;
+  border-radius: 0.6rem;
+  color: #fff;
+  font-size: 0.26rem;
+  cursor: pointer;
+} */
+
+.tool-btn .wallet-adapter-button{
+  margin-left: 0.5rem;
+  min-width: 2.34rem;
+  padding: 0 0.2rem;
+  text-align: center;
+  height: 0.63rem;
+  line-height: 0.63rem;
+  background: #0759FA;
+  border-radius: 0.6rem;
+  color: #fff;
+  font-size: 0.26rem;
+  cursor: pointer;
+  justify-content: center;
+} 

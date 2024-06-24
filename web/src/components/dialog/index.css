@@ -1,0 +1,149 @@
+.reddem{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.reddem-main{
+  width: 5.28rem;
+  background: #FFFFFF;
+  border-radius: 0.25rem;
+  padding-bottom: 0.27rem;
+}
+.reddem-main-icon{
+  width: 1.45rem;
+  height: 1.29rem;
+  margin: -1.04rem auto 0;
+  display: block;
+}
+.reddem-name{
+  text-align: center;
+  color: #000000;
+  font-size: 0.24rem;
+  margin-top: 0.23rem;
+}
+.reddem-text{
+  margin-top: 0.56rem;
+  text-align: center;
+}
+.reddem-footer{
+  margin-top: 0.44rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 0.4rem;
+}
+.reddem-btn{
+  width: 1.78rem;
+  height: 0.46rem;
+  line-height: 0.46rem;
+  text-align: center;
+  cursor: pointer;
+  background: #B6B6B6;
+  border-radius: 0.23rem;
+  font-size: 0.2rem;
+  color: #fff;
+}
+.reddem-btn-ok{
+  background-color: #0759FA;
+}
+.reddem-dl{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 0.18rem;
+  padding: 0 0.35rem;
+  margin-bottom: 0.36rem;
+  margin-top: 0.36rem;
+}
+.reddem-dt{
+  width: 3.4rem;
+  color: #6D6D6D;
+}
+.reddem-dd{
+  flex: 1;
+  color: #FF9703;
+  font-weight: bold;
+}
+.success-main{
+  width: 6.44rem;
+  height: 1.89rem;
+  background: #FFFFFF;
+  border-radius: 0.42rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.message-header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.32rem;
+  color: #1A1A1A;
+}
+.message-header-icon{
+  margin-right: 0.1rem;
+  width: 0.4rem;
+  height: 0.5rem;
+}
+.message-text{
+  margin-top: 0.3rem;
+  padding: 0 0.4rem;
+  font-size: 0.3rem;
+  color: #999999;
+}
+
+.error-main{
+  width: 6.44rem;
+  height: 2.5rem;
+  background: #FFFFFF;
+  border-radius: 0.42rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.close-main{
+  width: 6.44rem;
+  height: 4.03rem;
+  background: #FFFFFF;
+  border-radius: 0.42rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 0.5rem;
+}
+.close-text{
+  font-size: 0.32rem;
+  color: #5C5C5C;
+  padding: 0 0.7rem;
+}
+.close-btn{
+  width: 2.08rem;
+  height: 0.69rem;
+  line-height: 0.69rem;
+  background: #0759FA;
+  border-radius: 0.34rem;
+  font-size: 0.3rem;
+  color: #FFFFFF;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 0.75rem;
+}
+.close-icon{
+  width: 1.1rem;
+  height: 1.1rem;
+  position: absolute;
+  top: -0.5rem;
+  left: 50%;
+  margin-left: -0.55rem;
+}

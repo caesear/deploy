@@ -1,0 +1,113 @@
+.lp-card{
+  margin-top: 0.5rem;
+  background: #FFFFFF;
+  border-radius: 0.26rem;
+  padding: 0.3rem 0.4rem;
+}
+.lp-h4{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 0.28rem;
+  color: #000;
+}
+.lp-h4-bar{
+  width: 0.06rem;
+  height: 0.19rem;
+  background: #0759FA;
+  margin-right: 0.1rem;
+}
+.lp-h4-icon{
+  width: 1.23rem;
+  height: 0.25rem;
+  margin-left: 0.27rem;
+}
+.lp-main{
+  width: 5.4rem;
+  margin: 0 auto;
+  margin-top: 0.8rem;
+}
+
+.lp-text{
+  font-size: 0.25rem;
+  color: #606061;
+  margin-bottom: 0.34rem;
+}
+.lp-input{
+  width: 5.4rem;
+  height: 0.69rem;
+  background: rgba(231,231,231,0.8);
+  border-radius: 0.35rem;
+  text-align: center;
+  border: 0;
+}
+.lp-footer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.6rem;
+  margin-top: 0.44rem;
+  margin-bottom: 0.6rem;
+}
+.lp-btn{
+  width: 1.73rem;
+  height: 0.52rem;
+  font-size: 0.24rem;
+  color: #FFFFFF;
+  line-height: 0.52rem;
+  background: #0759FA;
+  border-radius: 0.26rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.lp-main2{
+  margin: 0.7rem auto 0;
+  width: 6.25rem;
+}
+.lp-box-hd{
+  height: 0.73rem;
+  background: #0759FA;
+  border-radius: 0.07rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.26rem;
+  color: #fff;
+}
+.lp-box-hd-bar{
+  padding: 0 0.2rem;
+  height: 0.42rem;
+  line-height: 0.42rem;
+  background: #B5CEFF;
+  border-radius: 0.21rem;
+  margin-left: 0.22rem;
+}
+.lp-box-bd{
+  height: 2.77rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.08rem;
+  background: #F3F6FD;
+  padding: 0 0.56rem;
+}
+.lp-box-btn{
+  width: 2rem;
+  text-align: center;
+  height: 0.62rem;
+  line-height: 0.62rem;
+  background: #F3F6FD;
+  border-radius: 0.31rem;
+  border: 1px solid #0759FA;
+  font-size: 0.24rem;
+  cursor: pointer;
+  color: #0759FA;
+}
+.lp-box-btn-primary{
+  color: #fff;
+  background-color: #0759FA;
+}

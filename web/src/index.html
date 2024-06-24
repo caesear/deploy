@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="referrer" content="no-referrer"/>
+    <title>zo</title>
+    <base href="/" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script>
+      function setFont(){
+        var html = document.documentElement;
+        var k = 1920;
+        html.style.fontSize = Math.max(Math.min(html.clientWidth,1920),750) / k * 100 + "px";
+      }
+      setFont()
+      window.addEventListener('resize', () => {
+        setFont()
+      }, false);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
